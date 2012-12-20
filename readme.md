@@ -1,6 +1,6 @@
 # Ladybug
 
-![screenshot][https://raw.github.com/bear7/ladybug/master/img/screenshot1.jpg]
+![screenshot](https://raw.github.com/bear7/ladybug/master/img/screenshot1.jpg)
 
 # Rules
 
