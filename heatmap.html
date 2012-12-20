@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link href="vendor/google-code-prettify/prettify.css" type="text/css" rel="stylesheet"/>
+    <style>
+        #header, #heatmap {
+            margin: 10px auto;
+            width: 680px;
+        }
+
+        #source {
+            margin: 0 auto;
+            width: 670px;
+            height: 460px;
+        }
+
+        #heatmap .buttons {
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        #heatmapArea {
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+<div id="header"><h1>JS Runtime HeatMap</h1></div>
+<div id="heatmap">
+    <div>
+        <textarea id="source"></textarea>
+    </div>
+    <div class="buttons">
+        <button id="fire" class="btn btn-primary btn-large"> Fire</button>
+    </div>
+
+    <div id="heatmapArea">
+        <pre class="prettyprint linenums"></pre>
+    </div>
+</div>
+
+
+<script src="vendor/heatmap/heatmap.js"></script>
+<script src="vendor/google-code-prettify/prettify.js"></script>
+<script data-main="src/script/main" src="vendor/requirejs/require.js"></script>
+</body>
+</html>

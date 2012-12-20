@@ -1,0 +1,31 @@
+{
+  "name": "Ladybug",
+  "version": "0.1.1",
+  "description": "make the sky blue",
+  "default_locale": "en",
+  "icons":{
+		"16": "icon/16.png",
+        "48": "icon/48.png",
+        "128": "icon/128.png"
+  },
+  "browser_action": {
+    "default_icon": "icon/48.png",
+    "name": "Ladybug"
+  },
+  "background_page": "background.html",
+  "permissions": [
+      "cookies",
+	  "tabs",
+	  "bookmarks",
+	  "contextMenus",
+      "webNavigation",
+      "http://*/*",
+      "https://*/*",
+	  "unlimitedStorage"
+  ],
+  "content_scripts": [ {
+      "js": ["vendor/requirejs/require.js","src/config.js","src/util.js","src/events.js","src/sniffer.js","src/chrome/content.js"],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ]
+}

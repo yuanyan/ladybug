@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet"  href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css">
+    <style>
+        body {
+            position: relative;
+            padding-top: 10px;
+            background-color: #fff;
+            background-image: url(img/grid-18px-masked.png);
+            background-repeat: repeat-x;
+            background-position: 10px 40px;
+        }
+
+        .grade-header, .stat-header {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .grade-overall {
+            color: #fefefe;
+            width: 22px;
+            height: 22px;
+            text-align: center;
+            font-size: 13pt;
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+        ul#grade-list > li > a {
+            border-width: 1px 1px 1px 5px;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            width: 225px;
+            background: #fff !important;
+            margin-bottom: 0;
+        }
+
+        #grade-list span.grade {
+            -moz-box-align: center;
+            display: inline-block;
+            /*text-align: center;*/
+            width: 20px;
+            color: #101010; /* dark grey */
+            font-weight: bold;
+        }
+
+        .grade-A {
+            background: #34a234;
+            border-left-color: #34a234 !important;
+        }
+
+        .grade-B {
+            background: #a4cb58;
+            border-left-color: #a4cb58 !important;
+        }
+
+        .grade-C {
+            background: #fadd3d;
+            border-left-color: #fadd3d !important;
+        }
+
+        .grade-D {
+            background: #f5a249;
+            border-left-color: #f5a249 !important;
+        }
+
+        .grade-E {
+            background: #e46648;
+            border-left-color: #e46648 !important;
+        }
+
+        .grade-F {
+            background: #df4444;
+            bborder-left-color: #df4444 !important;
+        }
+
+        .grade-G {
+            background: #8b8b8b;
+            border-left-color: #8b8b8b !important;
+
+        }
+
+        .progress {
+            background-color: #EEE;
+        }
+
+        .larger-number {
+            font-size: 36px;
+            line-height: 40px;
+            font-weight: bold;
+            color: #666;
+            text-shadow: 0 1px 0 white;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="span10">
+
+
+    <ul id="tab" class="nav nav-tabs">
+        <li class="active"><a id="tab-main" href="#home" data-toggle="tab"><i class="icon-home"></i> Home</a></li>
+        <li class=""><a id="tab-grade" href="#grade" data-toggle="tab"><i class="icon-th-list"></i> Grade</a></li>
+        <li class=""><a id="tab-stat" href="#stat" data-toggle="tab"><i class="icon-bar-chart"></i> Statistics</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-flag"></i> Help <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <!--<li><a href="#help1" data-toggle="tab"><i class="icon-user"></i> Authors</a></li>-->
+                <!--<li><a href="#help2" data-toggle="tab"><i class="icon-comment"></i> Suggest</a></li>-->
+                <!--<li class="divider"></li>-->
+                <li><a href="https://github.com/bear7/ladybug/wiki" target="_blank"><i class="icon-comments"></i> Ladybug Help</a></li>
+                <li><a href="https://github.com/bear7/ladybug/issues" target="_blank"><i class="icon-thumbs-up"></i> Send Feedback</a></li>
+                <li class="divider"></li>
+                <li><a href="https://github.com/bear7/ladybug/" target="_blank"><i class="icon-github-sign"></i> Ladybug Github</a></li>
+                <li><a href="http://twitter.com/ladybug" target="_blank"><i class="icon-comment"></i> Ladybug Home</a></li>
+                <li><a href="http://twitter.com/ladybug" target="_blank"><i class="icon-twitter-sign"></i> Follow Ladybug</a></li>
+                <li><a href="http://facebook.com/ladybug" target="_blank"><i class="icon-facebook-sign"></i> Like Ladybug</a></li>
+                <li class="divider"></li>
+                <li><a> <i></i> Version 1.0.0</a></li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <div class="tab-content">
+        <!-- home tab start-->
+        <div class="tab-pane fade active in" id="home">
+
+            <div class="hero-unit">
+                <h2>Ladybug <small>make the sky blue</small></h2>
+                <!--<h1>Heading</h1>-->
+                <!--<p>Tagline</p>-->
+                <p>
+                    <a id="run" class="btn btn-primary">
+                        <i class="icon-play icon-white"></i> Run Test
+                    </a>
+                </p>
+
+            </div>
+
+
+        </div>
+
+        <!-- grade tab start-->
+        <div class="tab-pane fade" id="grade">
+
+            <!-- grade process-->
+            <div id="grade-progress" class="span8">
+
+
+                <div id="grade-progress-sniffer" class="progress progress-striped active">
+                    <div class="bar" style="width: 1%;"></div>
+                </div>
+                <div id="grade-progress-sniffer-status" class="muted">sniffer progress</div>
+
+                <hr>
+
+                <div id="grade-progress-crawler" class="progress progress-striped active">
+                    <div class="bar" style="width: 1%;"></div>
+                </div>
+                <div id="grade-progress-crawler-status" class="muted">crawler progress</div>
+
+
+                <hr>
+
+                <div id="grade-progress-parser" class="progress progress-striped active">
+                    <div class="bar" style="width: 1%;"></div>
+                </div>
+                <div id="grade-progress-parser-status" class="muted">parser progress</div>
+
+            </div>
+
+            <!-- grade result-->
+            <div id="grade-result" class="hide">
+                
+                <div id="grade-header" class="grade-header">
+                    <!--<p> <strong>Grade </strong> <span class="grade-overall grade-A">A</span>-->
+                        <!--<small>Overall performance score </small> <span>91</span>-->
+                        <!--<small>URL: </small> <small>http://bbs.oa.com/forum/19445/thread/view/193489</small>-->
+                    <!--</p>-->
+                </div>
+
+
+                <div class="row-fluid">
+                    
+                    <div class="span4">
+                        <!--Sidebar content-->
+
+                        <div id="grade-sidebar" class="tabbable tabs-left">
+                            <!--<ul id="grade-list" class="nav nav-tabs nav-stacked">-->
+                                <!--<li class="active"><a class="grade-A" href="#lA" data-toggle="tab"> <span class="grade">A</span> <span class="desc">Minimize the Number of iframes</span></a></li>-->
+                                <!--<li><a class="grade-B" href="#lB" data-toggle="tab"> <span class="grade">B</span> <span class="desc">Avoid large TABLES in IE 6&7</span></a></li>-->
+                            <!--</ul>-->
+                        </div>
+  
+
+                    </div>
+
+                    <div class="span8">
+                        <!--Body content-->
+                        <div id="grade-content" class="tab-content">
+                            <!--<div class="tab-pane active" id="lA">-->
+                                <!--<p>I'm in Section A.</p>-->
+                            <!--</div>-->
+                            <!--<div class="tab-pane fade" id="lB">-->
+                                <!--<p>Howdy, I'm in Section B.</p>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="tab-pane fade" id="stat">
+            <!-- stat process-->
+            <div id="stat-progress" class="span8">
+
+                <div id="stat-progress-chart" class="progress progress-striped active">
+                    <div class="bar" style="width: 1%;"></div>
+                </div>
+                <div id="stat-progress-chart-status" class="muted">statistics progress</div>
+
+                <hr>
+
+            </div>
+
+            <div id="stat-result" class="hide">
+            <div class="stat-header">
+                <p> <strong>Statistics </strong>
+                </p>
+            </div>
+
+            <h3>Server Response Code</h3>
+            <div class="well center">
+                <div id="stat-code" class="row-fluid">
+                    <div class="span3">
+                        <p><span class="badge badge-success">2XX</span> <small>Success</small> <br> <span class="larger-number">0</span> </p>
+                    </div>
+                    <div class="span3">
+                        <p><span class="badge badge-info">3XX</span> <small>Redirecting</small> <br> <span class="larger-number">0</span> </p>
+                    </div>
+                    <div class="span3">
+                        <p><span class="badge badge-warning">4XX</span> <small>Client Error</small> <br> <span class="larger-number">0</span> </p>
+                    </div>
+                    <div class="span3">
+                        <p><span class="badge badge-important">5XX</span> <small>Server Error</small> <br> <span class="larger-number">0</span> </p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Performance Timing Analysis</h3>
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <div id="stat-1"></div>
+                </div>
+            </div>
+
+            <h3>Components Analysis</h3>
+            <div class="row-fluid">
+                <div class="span12">
+                    <div id="stat-2"></div>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+            
+            
+
+        <!-- help tab start-->
+        <!--<div class="tab-pane fade" id="help1">-->
+            <!--<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>-->
+        <!--</div>-->
+        <!--<div class="tab-pane fade" id="help2">-->
+            <!--<p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>-->
+        <!--</div>-->
+    </div>
+    
+    <hr>
+    
+</div>
+
+    <script id="grade-header-template" type="text/html">
+        <p>
+            <strong>Grade </strong> <span class="grade-overall grade-{{grade}}">{{grade}} </span>
+            <small>Overall performance score </small> <span>{{score}}</span>
+            <small>URL: </small> <small>{{url}}</small>
+        </p>
+    </script>
+
+    <script id="grade-sidebar-template" type="text/html">
+        <ul id="grade-list" class="nav nav-tabs nav-stacked">
+            {{#rules}}
+            <li><a class="grade-{{grade}}" href="#{{id}}" data-toggle="tab"> <span class="grade">{{grade}}</span> <span class="rule">{{rule}}</span></a></li>
+            {{/rules}}
+        </ul>
+    </script>
+
+    <script id="grade-content-template" type="text/html">
+        {{#rules}}
+        <div class="tab-pane fade" id="{{id}}">
+            <h4>Grade {{grade}} on {{rule}}</h4>
+            <hr/>
+            <div>
+
+
+               {{#results}}
+
+                 <h6>{{file.href}}</h6>
+
+                 <ol>
+                 {{#result}}
+                   <li>{{text}}  {{#if line}}&nbsp;&nbsp;<small class="muted"> [{{line}}, {{col}}]</small> {{/if}} </li>
+                 {{/result}}
+                 </ol>
+
+                <hr/>
+
+               {{/results}}
+            </div>
+
+            <hr/>
+            <p>{{tip}}</p>
+        </div>
+        {{/rules}}
+    </script>
+
+    <script id="stat-code-template" type="text/html">
+        <div class="span3">
+            <p><span class="badge badge-success">2XX</span> <small>Success</small> <br> <span class="larger-number">{{2xx}}</span> </p>
+        </div>
+        <div class="span3">
+            <p><span class="badge badge-info">3XX</span> <small>Redirecting</small> <br> <span class="larger-number">{{3xx}}</span> </p>
+        </div>
+        <div class="span3">
+            <p><span class="badge badge-warning">4XX</span> <small>Client Error</small> <br> <span class="larger-number">{{4xx}}</span> </p>
+        </div>
+        <div class="span3">
+            <p><span class="badge badge-important">5XX</span> <small>Server Error</small> <br> <span class="larger-number">{{5xx}}</span> </p>
+        </div>
+    </script>
+
+    <script src="vendor/jquery/jquery-1.7.2.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/highcharts/highcharts.js"></script>
+    <script data-main="src/main" src="vendor/requirejs/require.js"></script>
+
+</body>
+</html>
