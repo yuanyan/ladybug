@@ -30,8 +30,8 @@
  * Avoid Flash, replacing with browser-native implementations (JS, SVG, VML, Canvas)
  * Use icon fonts replace icon images
  * Use HTML 5 Doctype
- * Use HTML 5 Encoding, and put on the top of head
- * <S>Defines an offline manifest</S>  <http://appcachefacts.info/>
+ * Use HTML 5 Encoding, and put into the top of <head/>
+ * <STRIKE>Defines an offline manifest</STRIKE>  <http://appcachefacts.info/>
 
 ## Javascript Rules
  * Use Smart Event Handlers <http://developer.yahoo.com/performance/rules.html#events>
