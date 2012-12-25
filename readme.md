@@ -31,7 +31,7 @@
  * Use icon fonts replace icon images
  * Use HTML 5 Doctype
  * Use HTML 5 Encoding, and put into the top of head tag
-* <del>Defines an offline manifest http://appcachefacts.info/</del>
+ * <del>Defines an offline manifest http://appcachefacts.info/</del>
 
 
 ## Javascript Rules
