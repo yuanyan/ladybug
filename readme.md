@@ -31,7 +31,8 @@
  * Use icon fonts replace icon images
  * Use HTML 5 Doctype
  * Use HTML 5 Encoding, and put into the top of head tag
- * Defines an offline manifest http://appcachefacts.info/
+* <del>Defines an offline manifest http://appcachefacts.info/</del>
+
 
 ## Javascript Rules
  * Use Smart Event Handlers http://developer.yahoo.com/performance/rules.html#events
