@@ -23,8 +23,9 @@
  * Avoid empty href and src
  * Stylesheets should be linked at the top of the page inside the <head>, after the <title> in order to provide a smooth rendering
  * Avoid Inline Script and Style cross http://www.stevesouders.com/blog/2009/05/06/positioning-inline-scripts/
- * Inline Small JavaScript, External Large Javascript
- * Inline Small CSS, External Large CSS
+ * Avoid embedded and inline styles/JavaScript because it forces the browser to make a context switch between the HTML and CSS/JavaScript parsers. 
+ * Inline Small JavaScript, External Large JavaScript
+ * Inline Small Stylesheets, External Large Stylesheets
  * Avoid Deprecated elements
  * Reduce Document Size
  * Reduce Document Complexity
