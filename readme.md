@@ -1,6 +1,6 @@
 # Ladybug
 
-![screenshot](https://raw.github.com/bear7/ladybug/master/img/screenshot1.jpg)
+![screenshot](https://raw.github.com/yuanyan/ladybug/master/img/screenshot1.jpg)
 
 # Rules
 
@@ -51,13 +51,9 @@
  * Serve resources from a consistent URL https://developers.google.com/speed/docs/best-practices/payload?hl=zh-CN#duplicate_resources
  * Less DNS lookups – fetch components from not more than 2-4 domains
 
-
-# See
+# Ref
  * [Best Practices for Speeding Up Your Web Site](http://developer.yahoo.com/performance/rules.html)
  * [Book of Speed](http://www.bookofspeed.com/)
  * [Web Performance Best Practices](http://code.google.com/intl/zh-CN/speed/page-speed/docs/rules_intro.html)
  * http://code.google.com/p/page-speed/wiki
-
-# Tools
- * [http://www.webpagetest.org/](http://www.webpagetest.org/)
 
