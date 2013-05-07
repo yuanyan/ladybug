@@ -45,13 +45,16 @@
  * Speeding up JavaScript: Working with the DOM https://developers.google.com/speed/articles/javascript-dom
  * Do you really need jQuery? create your own mini-library
 
+
 ## Other Rules
  * Specifying a character set in the HTTP response headers of your HTML documents allows the browser to begin parsing HTML and executing scripts immediately. <https://developers.google.com/speed/docs/best-practices/rendering?hl=zh-CN#SpecifyCharsetEarly>
  * Reduce Document Cookie Size
  * Serve resources from a consistent URL https://developers.google.com/speed/docs/best-practices/payload?hl=en#duplicate_resources
  * Less DNS lookups – fetch components from not more than 2-4 domains
  * Avoid large sprite images, stylesheets, script, loading bytes in parallel can be faster shttp://blog.getify.com/obsessions-http-request-reduction/
- * 
+
+
+
 # Ref
  * [Best Practices for Speeding Up Your Web Site](http://developer.yahoo.com/performance/rules.html)
  * [Book of Speed](http://www.bookofspeed.com/)
