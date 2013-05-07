@@ -51,7 +51,7 @@
  * Reduce Document Cookie Size
  * Serve resources from a consistent URL https://developers.google.com/speed/docs/best-practices/payload?hl=en#duplicate_resources
  * Less DNS lookups – fetch components from not more than 2-4 domains
- * Avoid large sprite images, stylesheets, script, loading bytes in parallel can be faster  http://blog.getify.com/obsessions-http-request-reduction/
+ * Avoid large sprite images, stylesheets, script when combining all images into a single sprite image, combining all scripts into a single script, combining all CSS into a single stylesheet, try loading bytes in parallel can be faster  http://blog.getify.com/obsessions-http-request-reduction/
 
 
 
