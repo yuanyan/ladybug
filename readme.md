@@ -21,7 +21,7 @@
  * Specifying a width and height for all images allows for faster rendering by eliminating the need for unnecessary reflows and repaints.
  * Avoid Depth Nesting Node
  * Avoid empty href and src
- * Stylesheets should be linked at the top of the page inside the <head>, after the <title> in order to provide a smooth rendering
+ * Stylesheets should be linked at the top of the page inside the &lt;head&gt;, after the &lt;title&gt; in order to provide a smooth rendering
  * JavaScript should be linked at the bottom of the page
  * Avoid Inline Script and Style cross http://www.stevesouders.com/blog/2009/05/06/positioning-inline-scripts/
  * Avoid embedded and inline styles/JavaScript because it forces the browser to make a context switch between the HTML and CSS/JavaScript parsers. 
